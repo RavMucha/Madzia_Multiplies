@@ -1,0 +1,142 @@
+body {
+  font-family: sans-serif, monospace;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  text-align: center;
+  min-width: 300px;
+  opacity: 0.9;
+  background: #ffa69e;
+  background: radial-gradient(circle, #ff695c 40%, #ff7c70 80%, #ffa299 100%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #8ca9b9;
+  height: 100%;
+  user-select: none;
+  letter-spacing: 1px;
+}
+
+img {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  filter: brightness(130%) drop-shadow(1px 1px 1px #ffa69e);
+  z-index: 1;
+}
+
+table {
+  table-layout: fixed;
+  width: 95%;
+  overflow: auto;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #ffeceb;
+  box-shadow: inset 2px 2px 2px #ffc5c2, inset -2px -2px 2px #ffc5c2;
+  border: none;
+  margin: auto;
+}
+
+td {
+  padding: 10px;
+  border-radius: 12px;
+  opacity: 0.1;
+  position: relative;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 100ms;
+  transition-delay: 5ms;
+}
+
+td:active {
+  transform: scale(1.5) translateY(1px);
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-delay: 1ms;
+}
+
+th {
+  background-color: #fff;
+  box-shadow: 1px 1px 1px #ffc5c2, -1px -1px 1px #ffc5c2;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  position: relative;
+}
+
+th:hover {
+  opacity: 0.5;
+  filter: brightness(150%);
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  color: #520400;
+  box-shadow: 3px 3px 3px #f51400, 10px 10px 10px #ff1f0a, -1px -1px 3px #ff1f0a;
+  border-radius: 10px;
+  padding: 15px;
+  position: fixed;
+  width: 75vw;
+  top: 10px;
+  bottom: 10px;
+  left: 235px;
+  overflow: auto;
+}
+
+.hi_td {
+  background-color: #ff695c;
+  opacity: 1;
+  filter: brightness(130%) drop-shadow(1px 1px 1px #ffa69e);
+  font-weight: 700;
+}
+
+.hi_th {
+  background-color: #ffc5c2;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    color: #520400;
+    box-shadow: none;
+    border-radius: 10px;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+  }
+
+  table {
+    padding: 10px;
+    border-radius: 12px;
+    background-color: #ffeceb;
+    box-shadow: inset 3px 3px 3px #ffc5c2, inset -3px -3px 3px #ffc5c2;
+    margin: auto;
+    overflow: auto;
+    height: 50vh;
+  }
+
+  img {
+    position: fixed;
+    bottom: -130px;
+    transform: scale(0.5);
+    left: 20vw;
+    filter: brightness(130%) drop-shadow(1px 1px 1px #ffa69e);
+    z-index: 1;
+  }
+  svg {
+    width: 90%;
+  }
+  th {
+    font-size: 0.8rem;
+  }
+  td {
+    font-size: 0.7rem;
+  }
+}
