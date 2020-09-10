@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+  --main-clr: #ff5749;
+  --main-bg-clr: #ffa69e;
+  --next-bg-clr: #ffeceb;
+}
+
 .container::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -14,20 +22,20 @@
 }
 
 body {
-  font-family: sans-serif, monospace;
+  font-family: 'Nunito', sans-serif;
   margin: 0;
   padding: 0;
   background-size: cover;
   text-align: center;
   min-width: 300px;
   opacity: 0.9;
-  background: #ffa69e;
+  background: var(--main-bg-clr);
   background: radial-gradient(circle, #ff695c 40%, #ff7c70 80%, #ffa299 100%);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #8ca9b9;
+  background-color: #ffa69e;
   height: 100%;
   user-select: none;
   letter-spacing: 1px;
@@ -37,7 +45,7 @@ img {
   position: fixed;
   bottom: 0;
   left: 0;
-  filter: brightness(130%) drop-shadow(1px 1px 1px #ffa69e);
+  filter: brightness(130%) drop-shadow(1px 1px 1px var(--main-bg-clr));
   z-index: 1;
 }
 
@@ -47,7 +55,7 @@ table {
   overflow: auto;
   padding: 5px;
   border-radius: 10px;
-  background-color: #ffeceb;
+  background-color: var(--next-bg-clr);
   box-shadow: inset 2px 2px 2px #ffc5c2, inset -2px -2px 2px #ffc5c2;
   border: none;
   margin: auto;
@@ -70,7 +78,7 @@ td:active {
   transition-property: transform;
   transition-duration: 300ms;
   transition-delay: 1ms;
-  border: 1px solid #ff5749;
+  border: 1px solid var(--main-clr);
   z-index: 6;
 }
 
@@ -97,14 +105,14 @@ th:hover {
 }
 
 #myBtn {
+  font-family: 'Nunito', sans-serif;
   background-color: white; 
-  color: #ff5749; 
-  font-size: 1.2em;
-  border-radius: 10px;
-  font-weight: 500;
-  font-variant: small-caps;
-  border: 2px solid #ff5749;
-  padding: 10px 20px;
+  color: var(--main-clr); 
+  font-size: 1.1em;
+  border-radius: 4px;
+  font-weight: 600;
+  border: 3px solid var(--main-clr);
+  padding: 6px 12px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -117,7 +125,7 @@ th:hover {
 }
 
 #myBtn:hover {
-  background-color: #ff5749;
+  background-color: var(--main-clr);
   color: white;
 }
 
@@ -126,7 +134,7 @@ th:hover {
   color: #520400;
   box-shadow: 3px 3px 3px #f51400, 10px 10px 10px #ff1f0a, -1px -1px 3px #ff1f0a;
   border-radius: 10px;
-  padding: 15px;
+  padding: 0;
   position: fixed;
   width: 75vw;
   top: 10px;
@@ -138,7 +146,7 @@ th:hover {
 .hi_td {
   background-color: #ff695c;
   opacity: 1;
-  filter: brightness(130%) drop-shadow(1px 1px 1px #ffa69e);
+  filter: brightness(130%) drop-shadow(1px 1px 1px var(--main-bg-clr));
   font-weight: 700;
 }
 
@@ -166,7 +174,7 @@ th:hover {
   table {
     padding: 10px;
     border-radius: 12px;
-    background-color: #ffeceb;
+    background-color: var(--next-bg-clr);
     box-shadow: inset 3px 3px 3px #ffc5c2, inset -3px -3px 3px #ffc5c2;
     margin: auto;
     overflow: auto;
@@ -182,10 +190,10 @@ th:hover {
 
   img {
     position: fixed;
-    top: -130px;
-    transform: scale(0.3) rotate(180deg);
-    left: -90px;
-    filter: brightness(130%) drop-shadow(1px 1px 1px #ffa69e);
+    bottom: -130px;
+    transform: scale(0.3) rotate(5deg);
+    left: -95px;
+    filter: brightness(130%) drop-shadow(1px 1px 1px var(--main-bg-clr));
     z-index: 1;
   }
   svg {
@@ -211,10 +219,10 @@ th:hover {
 
   img {
     position: fixed;
-    top: -135px;
-    transform: scale(0.3) rotate(180deg);
-    left: 90px;
-    filter: brightness(130%) drop-shadow(1px 1px 1px #ffa69e);
+    bottom: -135px;
+    transform: scale(0.2) rotate(10deg);
+    left: -100px;
+    filter: brightness(130%) drop-shadow(1px 1px 1px var(--main-bg-clr));
     z-index: 1;
   }
 
@@ -237,7 +245,7 @@ th:hover {
 }
 
 .znaczek {
-  padding: 4px 6px;
+  padding: 3px 6px;
   background-color: #fff;
   border-radius: 50%;
 }
@@ -268,9 +276,10 @@ th:hover {
 }
 
 .checker {
+  font-family: 'Nunito', sans-serif;
   font-weight: 600;
   height: 26px;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: #fce7e6;
   border: solid 2px #520400;
   color: #520400; 
@@ -282,7 +291,7 @@ b.checker {
 
 /* Modal Content */
 .modal-content {
-  border-radius: 12px;
+  border-radius: 7px;
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -323,7 +332,7 @@ b.checker {
 }
 
 .modal-header {
-  border-radius: 10px 10px 0 0;
+  border-radius: 6px 6px 0 0;
   padding: 2px 2px;
   background-color: #ff695c;
   color: white;
@@ -332,7 +341,7 @@ b.checker {
 .modal-body {padding: 50px 0;}
 
 .modal-footer {
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 6px 6px;
   padding: 2px 8px;
   background-color: #ff695c;
   color: white;
