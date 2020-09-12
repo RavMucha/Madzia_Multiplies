@@ -14,6 +14,14 @@
   z-index: 5;
 }
 
+#Winning2 {
+  position: fixed;
+  left: 50%;
+  margin-left: -150px;
+  bottom: -300px;
+  z-index: 5;
+}
+
 .surprise {
   -webkit-animation: showMe 1s;
   -moz-animation: showMe 1s;

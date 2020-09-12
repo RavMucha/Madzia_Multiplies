@@ -8,10 +8,7 @@ function playSound(url) {
 }
 
 mdown = false;
-msel = [
-  [],
-  []
-];
+msel = [[], []];
 var funcfalse = function () {
   console.log("selsta");
 };
@@ -78,11 +75,15 @@ function problem() {
 var counter = 0;
 
 function Milestone() {
-  setTimeout(function () {
-    $("#Winning").addClass("surprise");
-  }, 10);
+  $("#Winning").addClass("surprise");
   setTimeout(function () {
     $("#Winning").removeClass("surprise");
+  }, 1000);
+}
+function Milestone2() {
+  $("#Winning2").addClass("surprise");
+  setTimeout(function () {
+    $("#Winning2").removeClass("surprise");
   }, 1000);
 }
 
@@ -104,7 +105,6 @@ function answer1() {
       document.getElementById("result").innerHTML += "&#128054;";
       counter++;
     } else if (counter == 2) {
-      document.getElementById("Pet").src = "./assets/dog.png";
       playSound(dog);
       document.getElementById("result").innerHTML += "&#128054;";
       Milestone();
@@ -113,11 +113,10 @@ function answer1() {
       document.getElementById("result").innerHTML += "&#129412;";
       counter++;
     } else if (counter == 6) {
-      document.getElementById("Pet").src = "./assets/unicorn.png";
       playSound(horse);
       counter = 0;
       document.getElementById("result").innerHTML = "Wynik: ";
-      Milestone();
+      Milestone2();
       modal.style.display = "none";
     }
     problem();
