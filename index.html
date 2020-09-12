@@ -9,39 +9,11 @@
     <link href="./styles/style.css" rel="stylesheet">
     <title>Madzia Liczy</title>
     <script src="./styles/jquery-1.10.1.min.js"></script>
-
-    <script type="text/javascript">
-        var number1;
-        var number2;
-        var answer3;
-        var answer2;
-
-        function problem() {
-            number1 = Math.floor(1 + Math.random() * 9);
-            number2 = Math.floor(1 + Math.random() * 9);
-            document.getElementById("prompt").innerHTML = "<b>" + number1 + "</b>" + " razy " + "<b>" + number2 + "</b>" + " to?";
-            answer2 = (number1 * number2);
-        }
-
-        function answer1() {
-            var statusDiv = document.getElementById("status");
-            answer3 = document.getElementById("answer").value;
-
-            if (answer3 != answer2)
-                statusDiv.innerHTML =
-                "<b class='znaczek' style='color: red'>&#10006;</b> Pudło! Spróbuj jeszcze raz. :-)";
-            else
-            if (answer3 == answer2) {
-                statusDiv.innerHTML = "<b class='znaczek' style='color: green;'>&#10004;</b> Tak, super!";
-                document.getElementById("answer").value = "";
-                problem();
-            }
-        }
-    </script>
 </head>
 
-<body onload="problem();">
-    <img src="./assets/AvatarM.png" alt="Madzia" />
+<body onload="problem()">
+    <div id="Winning"><img id="Pet" src="./assets/dog.png" alt="pet"></div>
+    <img id="Magda" src="./assets/AvatarM.png" alt="Madzia" />
     <div class="container">
         <div id="nav">
         <svg id="SVG-Circus" width="420px" height="80px" viewBox="0 0 500 165" style="background: none;"
@@ -366,7 +338,7 @@
                     <td>70</td>
                     <td>80</td>
                     <td>90</td>
-                    <td class="up-button" onclick="playBounce('./assets/funny.mp3')">100</td>
+                    <td class="up-button" onclick="playSound(bounce)">100</td>
                 </tr>
             </tbody>
         </table>
@@ -380,6 +352,7 @@
                 <div class="modal-header">
                     <span class="close">&times;</span>
                     <h2>Teścik z mnożenia</h2>
+                    <h5>Gramy do <b style="color: #520400; font-size: 1.1em">7</b> punktów zdobytych z rzędu. Powodzenia!</h5>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -390,6 +363,7 @@
                 </div>
                 <div class="modal-footer">
                     <h5 id="status">Wciśnij guzik <b class="checker">Tak?</b> aby sprawdzić swoją odpowiedź.</h5>
+                    <h6 id="result">Wynik: </h6>
                 </div>
             </div>
 

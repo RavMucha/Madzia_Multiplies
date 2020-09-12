@@ -1,7 +1,10 @@
-function playBounce(url) {
-  var sound = new Audio(url);
-  sound.play();
-  sound.volume = 0.3;
+var bounce = new Audio('./assets/funny.mp3');
+var dog = new Audio('./assets/doggy.mp3');
+var horse = new Audio('./assets/horse.mp3');
+
+function playSound(url) {
+  url.play();
+  url.volume = 0.4;
 }
 
 mdown = false;
@@ -55,3 +58,58 @@ $("tbody td", $tbl).on({
   mouseenter: hover,
   selectstart: funcfalse,
 });
+
+        var number1;
+        var number2;
+        var answer3;
+        var answer2;
+
+        function problem() {
+            number1 = Math.floor(1 + Math.random() * 9);
+            number2 = Math.floor(1 + Math.random() * 9);
+            document.getElementById("prompt").innerHTML = "<b>" + number1 + "</b>" + " razy " + "<b>" + number2 + "</b>" + " to?";
+            answer2 = (number1 * number2);
+        }
+
+        var counter = 0;
+
+        function answer1() {
+            var statusDiv = document.getElementById("status");
+            answer3 = document.getElementById("answer").value;
+
+            if (answer3 != answer2) {
+            document.getElementById("result").innerHTML = "Wynik: ";
+                statusDiv.innerHTML =
+                "<b class='znaczek' style='color: red'>&#10006;</b> Pudło! Spróbuj jeszcze raz. :-)";
+                counter = 0;
+            } else if (answer3 == answer2) {
+                statusDiv.innerHTML = "<b class='znaczek' style='color: green;'>&#10004;</b> Tak, super!";
+                document.getElementById("answer").value = "";
+                if (counter < 2) {
+                document.getElementById("result").innerHTML += "&#128054;";
+                counter++;
+                } else if (counter == 2) {
+                playSound(dog);
+                document.getElementById("Pet").src = "./assets/dog.png";
+                document.getElementById("result").innerHTML += "&#128054;";
+                Milestone();
+                counter++;
+                }else if (counter > 2 && counter < 6 ) {
+                document.getElementById("result").innerHTML += "&#129412;";
+                counter++;
+                } else if (counter == 6 ) {
+                  document.getElementById("Pet").src = "./assets/unicorn.png";
+                    playSound(horse);
+                    counter = 0;
+                    document.getElementById("result").innerHTML = "Wynik: ";
+                    Milestone();
+                    modal.style.display = "none";
+                }
+                problem();
+            }
+            function Milestone() {
+            $("#Winning").addClass("surprise");
+            setTimeout(function () {
+            $("#Winning").removeClass("surprise");}, 1000);
+            }
+        }
