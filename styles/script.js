@@ -8,7 +8,10 @@ function playSound(url) {
 }
 
 mdown = false;
-msel = [[], []];
+msel = [
+  [],
+  []
+];
 var funcfalse = function () {
   console.log("selsta");
 };
@@ -80,6 +83,7 @@ function Milestone() {
     $("#Winning").removeClass("surprise");
   }, 1000);
 }
+
 function Milestone2() {
   $("#Winning2").addClass("surprise");
   setTimeout(function () {
@@ -196,8 +200,8 @@ function confetti() {
     if (frameId % 3 == 0) {
       new Dot(
         canvas.width * Math.random() -
-          canvas.width +
-          (canvas.width / 2) * Math.random(),
+        canvas.width +
+        (canvas.width / 2) * Math.random(),
         -canvas.height / 2,
         getRandom(1, 3),
         getRandom(2, 4),
@@ -205,8 +209,8 @@ function confetti() {
       );
       new Dot(
         canvas.width * Math.random() +
-          canvas.width -
-          canvas.width * Math.random(),
+        canvas.width -
+        canvas.width * Math.random(),
         -canvas.height / 2,
         -1 * getRandom(1, 3),
         getRandom(2, 4),
@@ -225,3 +229,21 @@ function confetti() {
     return Math.random() * (max - min) + min;
   }
 }
+
+$(".hth").click(function () {
+  var daTable = $(this).closest("table");
+  var index = $(this).index() - 1;
+  $(".hth").removeClass("hi_th_r");
+  $(this).addClass("hi_th_r");
+  daTable.find("td").removeClass("selected");
+  daTable.find("tr").each(function () {
+    $(this).find("td").eq(index).addClass("selected");
+  });
+});
+
+$("#table-1 tbody tr th").click(function () {
+  $("#table-1 tr").removeClass("highlighted");
+  $("#table-1 tbody tr th").removeClass("hi_th_r");
+  $(this).addClass("hi_th_r");
+  $(this).parent().addClass("highlighted");
+});
