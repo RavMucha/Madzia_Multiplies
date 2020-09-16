@@ -7,11 +7,15 @@ function playSound(url) {
   url.volume = 0.4;
 }
 
+$(document).keypress(function (event) {
+  if (event.which == "13") {
+    event.preventDefault();
+    $("#subBut").trigger("click");
+  }
+});
+
 mdown = false;
-msel = [
-  [],
-  []
-];
+msel = [[], []];
 var funcfalse = function () {
   console.log("selsta");
 };
@@ -200,8 +204,8 @@ function confetti() {
     if (frameId % 3 == 0) {
       new Dot(
         canvas.width * Math.random() -
-        canvas.width +
-        (canvas.width / 2) * Math.random(),
+          canvas.width +
+          (canvas.width / 2) * Math.random(),
         -canvas.height / 2,
         getRandom(1, 3),
         getRandom(2, 4),
@@ -209,8 +213,8 @@ function confetti() {
       );
       new Dot(
         canvas.width * Math.random() +
-        canvas.width -
-        canvas.width * Math.random(),
+          canvas.width -
+          canvas.width * Math.random(),
         -canvas.height / 2,
         -1 * getRandom(1, 3),
         getRandom(2, 4),

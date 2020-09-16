@@ -6,6 +6,18 @@
   --next-bg-clr: #ffeceb;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 #canvas {
   display: block;
   position: fixed;
@@ -44,7 +56,7 @@ tr.highlighted td {
   animation: showMe 1s;
 }
 
-@-webkit-keyframes showMe {
+@keyframes showMe {
   0% {
     bottom: -300px;
   }
@@ -254,19 +266,22 @@ th:hover {
 }
 
 #answer {
-  height: 20px;
-  width: 40px;
+  height: 22px;
+  width: 30px;
+  font-weight: bold;
+  font-size: 1.1em;
   outline: none;
   border-radius: 5px;
-  border: solid 2px #ff695c;
+  border: solid 3px #ff695c;
   color: #520400;
 }
 
 .checker {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
-  height: 26px;
-  border-radius: 3px;
+  height: 30px;
+  vertical-align: top;
+  border-radius: 5px;
   background-color: #fce7e6;
   border: solid 2px #520400;
   color: #520400;
@@ -340,7 +355,7 @@ b.checker {
 }
 
 .modal-body {
-  padding: 50px 0;
+  padding: 45px 0;
 }
 
 .modal-footer {
