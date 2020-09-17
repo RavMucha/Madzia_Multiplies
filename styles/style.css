@@ -26,11 +26,11 @@ input[type="number"] {
 }
 
 .selected {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 tr.highlighted td {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 #Winning {
@@ -142,7 +142,7 @@ td {
 
 td:hover,
 tr.highlighted td.selected {
-  opacity: 0.7;
+  opacity: 0.8!important;
   border: 1px solid var(--main-clr);
   cursor: pointer;
 }
@@ -167,8 +167,7 @@ th {
 }
 
 th:hover {
-  opacity: 0.5;
-  filter: brightness(150%);
+  background-color: var(--next-bg-clr);
 }
 
 #nav {
@@ -221,7 +220,7 @@ th:hover {
 
 .hi_td {
   background-color: #ff695c;
-  opacity: 1;
+  opacity: 0.9!important;
   filter: brightness(130%) drop-shadow(1px 1px 1px var(--main-bg-clr));
   font-weight: 700;
 }
