@@ -265,6 +265,7 @@ th:hover {
 }
 
 #answer {
+  font-family: "Nunito", sans-serif;
   height: 22px;
   width: 30px;
   font-weight: bold;
