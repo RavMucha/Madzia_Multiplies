@@ -81,12 +81,12 @@ tr.highlighted td {
 .container::-webkit-scrollbar-thumb {
   border-radius: 0 12px 12px 0;
   background: #f51400;
-  box-shadow: inset 1px 0px 5px #520400;
+  box-shadow: inset 1px 0px 5px #ff5749;
 }
 
 .container::-webkit-scrollbar-track {
   border-radius: 0 12px 12px 0;
-  box-shadow: inset 3px 3px 5px #ff695c;
+  box-shadow: inset 2px -1px 3px #ff695c;
 }
 
 body {
@@ -142,7 +142,7 @@ td {
 
 td:hover,
 tr.highlighted td.selected {
-  opacity: 0.8!important;
+  opacity: 0.8 !important;
   border: 1px solid var(--main-clr);
   cursor: pointer;
 }
@@ -220,7 +220,7 @@ th:hover {
 
 .hi_td {
   background-color: #ff695c;
-  opacity: 0.9!important;
+  opacity: 0.9 !important;
   filter: brightness(130%) drop-shadow(1px 1px 1px var(--main-bg-clr));
   font-weight: 700;
 }
