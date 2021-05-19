@@ -210,6 +210,12 @@ th:hover {
 
 .container {
   background-color: rgb(255, 255, 255);
+  background: linear-gradient(-40deg, #bbffe5 40%, #ffddc1 50%, #afefff 80%, #ffe7c3 100%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: rainbow 12s ease infinite;
   color: #520400;
   box-shadow: 1px 1px 3px #f51400, 6px 6px 6px #ff695c, -1px -1px 3px #f51400;
   border-radius: 10px;
@@ -220,6 +226,18 @@ th:hover {
   bottom: 10px;
   left: 235px;
   overflow: auto;
+}
+
+@keyframes rainbow {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .hi_td {
