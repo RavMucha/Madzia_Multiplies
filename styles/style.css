@@ -210,12 +210,12 @@ th:hover {
 
 .container {
   background-color: rgb(255, 255, 255);
-  background: linear-gradient(-40deg, #bbffe5 40%, #ffddc1 50%, #afefff 80%, #ffe7c3 100%);
+  background: linear-gradient(-40deg,#fff9d6 0%, #c5ffdd 30%, #ffe7e7 50%, #afefff 70%, #ffffff 100%);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 400% 400%;
-  animation: rainbow 12s ease infinite;
+  animation: rainbow 14s ease infinite;
   color: #520400;
   box-shadow: 1px 1px 3px #f51400, 6px 6px 6px #ff695c, -1px -1px 3px #f51400;
   border-radius: 10px;
