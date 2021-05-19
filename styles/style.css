@@ -228,6 +228,13 @@ th:hover {
   overflow: auto;
 }
 
+.table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  min-height: 75%;
+}
+
 @keyframes rainbow {
 	0% {
 		background-position: 0% 50%;
@@ -264,26 +271,17 @@ th:hover {
 /* The Modal (background) */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   z-index: 7;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
 
 #answer {
@@ -391,10 +389,16 @@ b.checker {
 @media only screen and (max-width: 900px) {
   .container {
     background-color: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(-50deg, #bbffe5ce 40%, #ffddc100 50%, #afefffd8 80%, #ffe7c300 100%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 400% 400%;
+    animation: rainbow 20s ease infinite;
     width: 100%;
     color: #520400;
     box-shadow: none;
-    border-radius: 10px;
+    border-radius: 0;
     padding: 0;
     position: fixed;
     top: 0;
@@ -403,6 +407,10 @@ b.checker {
     left: 0;
     margin: auto;
     overflow: auto;
+  }
+
+  .table-container {
+    min-height: auto;
   }
 
   table {
