@@ -222,8 +222,8 @@ th:hover {
   padding: 0;
   position: fixed;
   width: 73vw;
-  top: 30px;
-  bottom: 10px;
+  top: 35px;
+  bottom: 25px;
   left: 235px;
   overflow: auto;
 }
