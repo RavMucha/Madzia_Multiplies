@@ -14,6 +14,7 @@ const assets = [
   "/assets/icon-256x256.png",
   "/assets/icon-384x384.png",
   "/assets/icon-512x512.png",
+  "/assets/maskable_icon_x384.png",
   "/assets/logo.png",
   "/assets/unicorn.png",
 ]
