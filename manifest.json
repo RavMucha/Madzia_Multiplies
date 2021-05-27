@@ -7,7 +7,7 @@
     "name": "Madzia Liczy",
     "app_name": "Madzia Liczy",
     "short_name": "MadziaLiczy",
-    "description": "An app for learning how to multiply",
+    "description": "This is a simple Progresive Web App with a multiplication table and a test of the same. Built for my daughter to learn how to multiply, but enyone's can use it obviously. ^^",
     "icons": [
         {
             "src": "/assets/icon-192x192.png",
