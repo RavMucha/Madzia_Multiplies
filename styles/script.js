@@ -1,12 +1,3 @@
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
-    navigator.serviceWorker
-      .register("../serviceWorker.js")
-      .then(res => console.log("service worker registered"))
-      .catch(err => console.log("service worker not registered", err))
-  })
-}
-
 var bounce = new Audio("./assets/funny.mp3");
 var dog = new Audio("./assets/doggy.mp3");
 var horse = new Audio("./assets/horse.mp3");
