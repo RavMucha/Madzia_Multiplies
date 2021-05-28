@@ -210,7 +210,14 @@ th:hover {
 
 .container {
   background-color: rgb(255, 255, 255);
-  background: linear-gradient(-40deg,#fff9d6 0%, #c5ffdd 30%, #ffe7e7 50%, #afefff 70%, #ffffff 100%);
+  background: linear-gradient(
+    -40deg,
+    #fff9d6 0%,
+    #c5ffdd 30%,
+    #ffe7e7 50%,
+    #afefff 70%,
+    #ffffff 100%
+  );
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -231,20 +238,20 @@ th:hover {
 .table-container {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   min-height: 75%;
 }
 
 @keyframes rainbow {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hi_td {
@@ -389,7 +396,13 @@ b.checker {
 @media only screen and (max-width: 900px) {
   .container {
     background-color: rgba(255, 255, 255, 0.1);
-    background: linear-gradient(-50deg, #bbffe5ce 40%, #ffddc100 50%, #afefffd8 80%, #ffe7c300 100%);
+    background: linear-gradient(
+      -50deg,
+      #bbffe5ce 40%,
+      #ffddc100 50%,
+      #afefffd8 80%,
+      #ffe7c300 100%
+    );
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -480,9 +493,9 @@ b.checker {
 
   #Magda {
     position: fixed;
-    bottom: -135px;
-    transform: scale(0.2) rotate(10deg);
-    left: -100px;
+    bottom: -100px;
+    transform: scale(0.6) rotate(10deg);
+    left: -60px;
     filter: brightness(130%) drop-shadow(1px 1px 1px var(--main-bg-clr));
     z-index: 1;
   }
