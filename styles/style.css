@@ -445,9 +445,9 @@ b.checker {
 
   #Magda {
     position: fixed;
-    bottom: -130px;
-    transform: scale(0.3) rotate(5deg);
-    left: -95px;
+    bottom: -110px;
+    transform: scale(0.5) rotate(5deg);
+    left: -75px;
     filter: brightness(130%) drop-shadow(1px 1px 1px var(--main-bg-clr));
     z-index: 1;
   }
